@@ -21,8 +21,8 @@ public class Task
     public double Progress { get; set; }
     public string Status { get; set; }
     public string Responsible { get; set; }
-    public string Dependencies { get; set; }
-    public string Comments { get; set; }
+    public string? Dependencies { get; set; }
+    public string? Comments { get; set; }
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }
 }

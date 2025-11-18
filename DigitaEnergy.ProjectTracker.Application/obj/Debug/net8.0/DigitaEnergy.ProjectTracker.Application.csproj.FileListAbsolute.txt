@@ -7,11 +7,10 @@
 /Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Application/bin/Debug/net8.0/DigitaEnergy.ProjectTracker.Application.dll
 /Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Application/bin/Debug/net8.0/DigitaEnergy.ProjectTracker.Application.pdb
 /Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Application/bin/Debug/net8.0/DigitaEnergy.ProjectTracker.Domain.dll
-/Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Application/bin/Debug/net8.0/DigitaEnergy.ProjectTracker.Infrastructure.dll
 /Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Application/bin/Debug/net8.0/DigitaEnergy.ProjectTracker.Domain.pdb
-/Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Application/bin/Debug/net8.0/DigitaEnergy.ProjectTracker.Infrastructure.pdb
 /Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Application/obj/Debug/net8.0/DigitaEn.EC5A831F.Up2Date
 /Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Application/obj/Debug/net8.0/DigitaEnergy.ProjectTracker.Application.dll
 /Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Application/obj/Debug/net8.0/refint/DigitaEnergy.ProjectTracker.Application.dll
 /Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Application/obj/Debug/net8.0/DigitaEnergy.ProjectTracker.Application.pdb
 /Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Application/obj/Debug/net8.0/ref/DigitaEnergy.ProjectTracker.Application.dll
+/Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Application/obj/Debug/net8.0/DigitaEnergy.ProjectTracker.Application.sourcelink.json

@@ -143,3 +143,4 @@
 /Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Api/bin/Debug/net8.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 /Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Api/bin/Debug/net8.0/DigitaEnergy.ProjectTracker.Application.dll
 /Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Api/bin/Debug/net8.0/DigitaEnergy.ProjectTracker.Application.pdb
+/Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Api/obj/Debug/net8.0/DigitaEnergy.ProjectTracker.Api.sourcelink.json

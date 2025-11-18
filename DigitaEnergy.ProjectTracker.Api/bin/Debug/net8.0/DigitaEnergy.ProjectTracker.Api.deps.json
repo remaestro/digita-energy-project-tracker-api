@@ -940,8 +940,7 @@
         "dependencies": {
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
-          "DigitaEnergy.ProjectTracker.Domain": "1.0.0",
-          "DigitaEnergy.ProjectTracker.Infrastructure": "1.0.0"
+          "DigitaEnergy.ProjectTracker.Domain": "1.0.0"
         },
         "runtime": {
           "DigitaEnergy.ProjectTracker.Application.dll": {
@@ -960,6 +959,7 @@
       },
       "DigitaEnergy.ProjectTracker.Infrastructure/1.0.0": {
         "dependencies": {
+          "DigitaEnergy.ProjectTracker.Application": "1.0.0",
           "DigitaEnergy.ProjectTracker.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "8.0.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.6"

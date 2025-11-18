@@ -19,7 +19,15 @@ public class TasksController : ControllerBase
     public async Task<ActionResult<IEnumerable<TaskDto>>> GetTasks()
     {
         var tasks = await _taskService.GetAllTasksAsync();
-        return Ok(tasks);
+        var response = new
+        {
+            Data = tasks,
+            TotalCount = tasks.Count(),
+            Page = 1,
+            PageSize = tasks.Count(),
+            TotalPages = 1
+        };
+        return Ok(response);
     }
 
     [HttpGet("{id}")]

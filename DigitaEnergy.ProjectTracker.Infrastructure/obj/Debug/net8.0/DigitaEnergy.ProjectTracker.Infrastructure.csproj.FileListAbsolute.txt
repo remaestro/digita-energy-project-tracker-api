@@ -15,3 +15,6 @@
 /Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Infrastructure/obj/Debug/net8.0/DigitaEnergy.ProjectTracker.Infrastructure.pdb
 /Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Infrastructure/obj/Debug/net8.0/DigitaEnergy.ProjectTracker.Infrastructure.genruntimeconfig.cache
 /Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Infrastructure/obj/Debug/net8.0/ref/DigitaEnergy.ProjectTracker.Infrastructure.dll
+/Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Infrastructure/obj/Debug/net8.0/DigitaEnergy.ProjectTracker.Infrastructure.sourcelink.json
+/Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Infrastructure/bin/Debug/net8.0/DigitaEnergy.ProjectTracker.Application.dll
+/Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Infrastructure/bin/Debug/net8.0/DigitaEnergy.ProjectTracker.Application.pdb
