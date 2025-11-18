@@ -16,10 +16,11 @@ namespace DigitaEnergy.ProjectTracker.Application.Services
             _milestoneRepository = milestoneRepository;
         }
 
-        public async Task<MilestoneDto?> GetMilestoneByIdAsync(int id)
+        public async Task<MilestoneDto> GetMilestoneByIdAsync(int id)
         {
             var milestone = await _milestoneRepository.GetByIdAsync(id);
-            if (milestone == null) return null;
+            if (milestone == null) 
+                throw new KeyNotFoundException($"Milestone with id {id} not found");
 
             return new MilestoneDto
             {
