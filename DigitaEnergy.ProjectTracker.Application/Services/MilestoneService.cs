@@ -1,6 +1,7 @@
 using DigitaEnergy.ProjectTracker.Application.DTOs.Milestones;
 using DigitaEnergy.ProjectTracker.Application.Interfaces;
 using DigitaEnergy.ProjectTracker.Domain.Entities;
+using DigitaEnergy.ProjectTracker.Domain.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
 using Task = System.Threading.Tasks.Task;
@@ -25,10 +26,14 @@ namespace DigitaEnergy.ProjectTracker.Application.Services
             return new MilestoneDto
             {
                 Id = milestone.Id,
+                Code = milestone.Code,
                 Title = milestone.Title,
-                Description = milestone.Description,
-                DueDate = milestone.DueDate,
-                Status = milestone.Status
+                Workstream = milestone.Workstream,
+                DatePlanned = milestone.DatePlanned,
+                DateActual = milestone.DateActual,
+                Status = milestone.Status,
+                Comments = milestone.Comments,
+                LinkedTaskIds = milestone.LinkedTaskIds
             };
         }
 
@@ -38,10 +43,14 @@ namespace DigitaEnergy.ProjectTracker.Application.Services
             return milestones.Select(milestone => new MilestoneDto
             {
                 Id = milestone.Id,
+                Code = milestone.Code,
                 Title = milestone.Title,
-                Description = milestone.Description,
-                DueDate = milestone.DueDate,
-                Status = milestone.Status
+                Workstream = milestone.Workstream,
+                DatePlanned = milestone.DatePlanned,
+                DateActual = milestone.DateActual,
+                Status = milestone.Status,
+                Comments = milestone.Comments,
+                LinkedTaskIds = milestone.LinkedTaskIds
             });
         }
 
@@ -49,10 +58,13 @@ namespace DigitaEnergy.ProjectTracker.Application.Services
         {
             var milestone = new Milestone
             {
+                Code = milestoneDto.Code,
                 Title = milestoneDto.Title ?? string.Empty,
-                Description = milestoneDto.Description ?? string.Empty,
-                DueDate = milestoneDto.DueDate,
+                Workstream = milestoneDto.Workstream,
+                DatePlanned = milestoneDto.DatePlanned,
+                DateActual = milestoneDto.DateActual,
                 Status = milestoneDto.Status ?? string.Empty,
+                Comments = milestoneDto.Comments,
                 LinkedTaskIds = milestoneDto.LinkedTaskIds ?? new List<int>(),
                 CreatedAt = DateTime.UtcNow,
                 UpdatedAt = DateTime.UtcNow
@@ -63,10 +75,14 @@ namespace DigitaEnergy.ProjectTracker.Application.Services
             return new MilestoneDto
             {
                 Id = milestone.Id,
+                Code = milestone.Code,
                 Title = milestone.Title,
-                Description = milestone.Description,
-                DueDate = milestone.DueDate,
-                Status = milestone.Status
+                Workstream = milestone.Workstream,
+                DatePlanned = milestone.DatePlanned,
+                DateActual = milestone.DateActual,
+                Status = milestone.Status,
+                Comments = milestone.Comments,
+                LinkedTaskIds = milestone.LinkedTaskIds
             };
         }
 
@@ -75,10 +91,14 @@ namespace DigitaEnergy.ProjectTracker.Application.Services
             var milestone = await _milestoneRepository.GetByIdAsync(id);
             if (milestone == null) return;
 
+            milestone.Code = milestoneDto.Code ?? milestone.Code;
             milestone.Title = milestoneDto.Title ?? milestone.Title;
-            milestone.Description = milestoneDto.Description ?? milestone.Description;
-            milestone.DueDate = milestoneDto.DueDate;
+            milestone.Workstream = milestoneDto.Workstream ?? milestone.Workstream;
+            milestone.DatePlanned = milestoneDto.DatePlanned;
+            milestone.DateActual = milestoneDto.DateActual;
             milestone.Status = milestoneDto.Status ?? milestone.Status;
+            milestone.Comments = milestoneDto.Comments ?? milestone.Comments;
+            milestone.LinkedTaskIds = milestoneDto.LinkedTaskIds ?? milestone.LinkedTaskIds;
             milestone.UpdatedAt = DateTime.UtcNow;
 
             await _milestoneRepository.UpdateAsync(milestone);

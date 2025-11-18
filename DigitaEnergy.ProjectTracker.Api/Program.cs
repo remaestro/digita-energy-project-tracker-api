@@ -1,9 +1,9 @@
 using DigitaEnergy.ProjectTracker.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
-using DigitaEnergy.ProjectTracker.Application.Features.Tasks;
+using DigitaEnergy.ProjectTracker.Application.Services;
 using DigitaEnergy.ProjectTracker.Application.Interfaces;
-using DigitaEnergy.ProjectTracker.Application.Features.Milestones;
-using DigitaEnergy.ProjectTracker.Application.Features.Risks;
+using DigitaEnergy.ProjectTracker.Infrastructure.Repositories;
+using DigitaEnergy.ProjectTracker.Domain.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +26,10 @@ builder.Services.AddDbContext<ProjectTrackerDbContext>(options =>
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
+// Register Repositories
+builder.Services.AddScoped<IMilestoneRepository, MilestoneRepository>();
+
+// Register Services
 builder.Services.AddScoped<ITaskService, TaskService>();
 builder.Services.AddScoped<IMilestoneService, MilestoneService>();
 builder.Services.AddScoped<IRiskService, RiskService>();
