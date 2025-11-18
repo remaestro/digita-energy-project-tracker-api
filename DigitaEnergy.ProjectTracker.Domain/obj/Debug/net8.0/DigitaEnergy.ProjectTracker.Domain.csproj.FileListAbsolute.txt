@@ -1,0 +1,11 @@
+/Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Domain/bin/Debug/net8.0/DigitaEnergy.ProjectTracker.Domain.deps.json
+/Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Domain/bin/Debug/net8.0/DigitaEnergy.ProjectTracker.Domain.dll
+/Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Domain/bin/Debug/net8.0/DigitaEnergy.ProjectTracker.Domain.pdb
+/Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Domain/obj/Debug/net8.0/DigitaEnergy.ProjectTracker.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Domain/obj/Debug/net8.0/DigitaEnergy.ProjectTracker.Domain.AssemblyInfoInputs.cache
+/Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Domain/obj/Debug/net8.0/DigitaEnergy.ProjectTracker.Domain.AssemblyInfo.cs
+/Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Domain/obj/Debug/net8.0/DigitaEnergy.ProjectTracker.Domain.csproj.CoreCompileInputs.cache
+/Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Domain/obj/Debug/net8.0/DigitaEnergy.ProjectTracker.Domain.dll
+/Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Domain/obj/Debug/net8.0/refint/DigitaEnergy.ProjectTracker.Domain.dll
+/Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Domain/obj/Debug/net8.0/DigitaEnergy.ProjectTracker.Domain.pdb
+/Users/adioyeremi/digita-energy-project-tracker-api/digita-energy-project-tracker-api/DigitaEnergy.ProjectTracker.Domain/obj/Debug/net8.0/ref/DigitaEnergy.ProjectTracker.Domain.dll

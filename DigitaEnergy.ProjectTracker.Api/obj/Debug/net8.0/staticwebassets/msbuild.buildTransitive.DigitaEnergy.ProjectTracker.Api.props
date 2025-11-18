@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/DigitaEnergy.ProjectTracker.Api.props" />
+</Project>
