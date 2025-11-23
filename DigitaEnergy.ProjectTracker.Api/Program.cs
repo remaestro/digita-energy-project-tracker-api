@@ -15,7 +15,10 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: MyAllowSpecificOrigins,
         policy =>
         {
-            policy.WithOrigins("http://localhost:4200") // Angular app URL
+            policy.WithOrigins(
+                    "http://localhost:4200", // Angular app URL local
+                    "https://refactored-funicular-rr6rwjq56rx3xrw9-4200.app.github.dev" // Codespace URL
+                )
                 .AllowAnyHeader()
                 .AllowAnyMethod();
         });
@@ -48,11 +51,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
-
-app.UseRouting();
+// Disable HTTPS redirection in development/Codespace to avoid CORS issues
+// app.UseHttpsRedirection();
 
 app.UseCors(MyAllowSpecificOrigins);
+
+app.UseRouting();
 
 app.UseAuthorization();
 
