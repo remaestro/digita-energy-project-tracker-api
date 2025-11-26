@@ -17,6 +17,13 @@ public class TaskService : ITaskService
     public async System.Threading.Tasks.Task<IEnumerable<TaskDto>> GetAllTasksAsync()
     {
         var tasks = await _context.Tasks.ToListAsync();
+        Console.WriteLine($"[TaskService] Tâches récupérées de la base: {tasks.Count}");
+        
+        if (tasks.Count > 0)
+        {
+            var firstTask = tasks.First();
+            Console.WriteLine($"[TaskService] Exemple première tâche - Id: {firstTask.Id}, Workstream: '{firstTask.Workstream}', Activity: '{firstTask.Activity}'");
+        }
 
         return tasks.Select(t => new TaskDto
         {
