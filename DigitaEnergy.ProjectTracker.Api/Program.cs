@@ -61,6 +61,10 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddAuthorization();
 
+// Configure Email Settings
+builder.Services.Configure<DigitaEnergy.ProjectTracker.Application.Configuration.EmailSettings>(
+    builder.Configuration.GetSection("EmailSettings"));
+
 // Register Repositories
 builder.Services.AddScoped<IMilestoneRepository, MilestoneRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
@@ -73,6 +77,8 @@ builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IJwtService, JwtService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IWorkstreamAuthorizationService, WorkstreamAuthorizationService>();
+builder.Services.AddScoped<IInvitationService, InvitationService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

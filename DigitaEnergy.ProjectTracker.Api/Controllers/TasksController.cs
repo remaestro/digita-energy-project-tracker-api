@@ -38,15 +38,10 @@ public class TasksController : ControllerBase
             ? await _authorizationService.GetAccessibleWorkstreamsAsync(userId)
             : await _authorizationService.GetFilteredWorkstreamsAsync(userId);
         
-        Console.WriteLine($"[TasksController] UserId: {userId}, ViewMode: {viewMode}");
-        Console.WriteLine($"[TasksController] Workstreams accessibles: {string.Join(", ", accessibleWorkstreams.Select(w => w.ToString()))}");
-        
         // Convertir les workstreams enum en valeurs de base de données
         var workstreamDbValues = accessibleWorkstreams.Select(w => w.ToDbValue()).ToList();
-        Console.WriteLine($"[TasksController] Workstreams DB values: {string.Join(", ", workstreamDbValues)}");
         
         var allTasks = await _taskService.GetAllTasksAsync();
-        Console.WriteLine($"[TasksController] Total tâches en base: {allTasks.Count()}");
         
         // Filtrer les tâches selon les workstreams accessibles
         // Utiliser FromDbValue pour normaliser la comparaison et gérer les variantes
@@ -56,22 +51,11 @@ public class TasksController : ControllerBase
             
             // Essayer de convertir le workstream de la tâche en enum
             var taskWorkstream = WorkstreamExtensions.FromDbValue(t.Workstream);
-            if (!taskWorkstream.HasValue)
-            {
-                Console.WriteLine($"[TasksController] Workstream non reconnu pour tâche {t.Id}: '{t.Workstream}'");
-                return false;
-            }
+            if (!taskWorkstream.HasValue) return false;
             
             // Vérifier si ce workstream est dans la liste accessible
-            var isAccessible = accessibleWorkstreams.Contains(taskWorkstream.Value);
-            if (!isAccessible)
-            {
-                Console.WriteLine($"[TasksController] Tâche {t.Id} avec workstream '{t.Workstream}' ({taskWorkstream.Value}) non accessible");
-            }
-            return isAccessible;
+            return accessibleWorkstreams.Contains(taskWorkstream.Value);
         }).ToList();
-        
-        Console.WriteLine($"[TasksController] Tâches filtrées retournées: {filteredTasks.Count}");
         
         var response = new
         {

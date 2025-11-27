@@ -14,17 +14,20 @@ public class AuthService : IAuthService
     private readonly IJwtService _jwtService;
     private readonly IMapper _mapper;
     private readonly IConfiguration _configuration;
+    private readonly IEmailService _emailService;
 
     public AuthService(
         IUserRepository userRepository,
         IJwtService jwtService,
         IMapper mapper,
-        IConfiguration configuration)
+        IConfiguration configuration,
+        IEmailService emailService)
     {
         _userRepository = userRepository;
         _jwtService = jwtService;
         _mapper = mapper;
         _configuration = configuration;
+        _emailService = emailService;
     }
 
     public async Task<LoginResponseDto?> LoginAsync(LoginRequestDto request)
@@ -145,9 +148,15 @@ public class AuthService : IAuthService
 
         await _userRepository.UpdateAsync(user);
 
-        // TODO: Send email with reset token
-        // For now, just log it (in production, send via email service)
-        Console.WriteLine($"Password reset token for {email}: {resetToken}");
+        // Envoyer l'email de réinitialisation
+        try
+        {
+            await _emailService.SendPasswordResetEmailAsync(user.Email, resetToken);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[AUTH] Failed to send password reset email: {ex.Message}");
+        }
 
         return true;
     }

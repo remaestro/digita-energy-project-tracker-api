@@ -10,6 +10,7 @@ public class ProjectTrackerDbContext : DbContext
     }
 
     public DbSet<User> Users { get; set; }
+    public DbSet<UserInvitation> UserInvitations { get; set; }
     public DbSet<Domain.Entities.Task> Tasks { get; set; }
     public DbSet<Milestone> Milestones { get; set; }
     public DbSet<Risk> Risks { get; set; }

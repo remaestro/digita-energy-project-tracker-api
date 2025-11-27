@@ -1,0 +1,19 @@
+using DigitaEnergy.ProjectTracker.Domain.Enums;
+
+namespace DigitaEnergy.ProjectTracker.Application.DTOs.Invitations;
+
+public class InvitationDto
+{
+    public Guid Id { get; set; }
+    public string Email { get; set; } = string.Empty;
+    public string? FirstName { get; set; }
+    public string? LastName { get; set; }
+    public Guid InvitedByUserId { get; set; }
+    public string? InvitedByName { get; set; }
+    public UserRole Role { get; set; }
+    public List<Workstream> AssignedWorkstreams { get; set; } = new();
+    public InvitationStatus Status { get; set; }
+    public DateTime ExpiresAt { get; set; }
+    public DateTime CreatedAt { get; set; }
+    public DateTime? AcceptedAt { get; set; }
+}
